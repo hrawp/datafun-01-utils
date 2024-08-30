@@ -7,26 +7,48 @@ This module provides a simple, reusable foundation for my analytics projects.
 
 Process:
 
-In this second interation, add a function that returns the byline as a string.
-I'll create a function named get_byline().
-It'll return my byline to whatever calls the get_byline() function.
-I'll update the main() function to use the new get_byline() function.
+In this third iteration, I declare addition variables.
 
 '''
 
 #####################################
-# Declare a global variable named byline.
+# Declare a global variables
 #####################################
 
-byline: str = 'Using Data to Land on Mars'
+# Boolean variable to indicate is the a Mars mission
+is_mars_landing: bool = True
+
+# Integer for how many days away from Mars.
+days_away: int = 16
+
+# List of strings representing robots ready for deployment
+is_robots: list = ["Rover", "StarLite", "Wallie", "Eclipe"]
+
+# List of floats robot sizes:  
+robot_size: list = [40.5, 37.5, 70.5, 60.5]
 
 #####################################
-# Define the get_bylein() Function
+# Define a global variable named byline.
+# Make it a multilin f-string to show our information.
+#####################################
+
+byline: str = f"""
+----------------------------------------------
+Options for Mars landing robots.
+----------------------------------------------
+Is this a Mars Mission: {is_mars_landing}
+How many days away is the closest robot: {days_away}
+What is the names of the robots: {is_robots}
+The size of the robots: {robot_size}
+"""
+
+#####################################
+# Define the get_byline() Function
 #####################################
 
 def get_byline() -> str:
-   '''Return a byline for my anlystics projects.'''
-   return byline
+    '''Return a byline for my anlystics projects.'''
+    return byline
    
 #####################################
 # Define a main() function for this module.
@@ -42,8 +64,8 @@ def get_byline() -> str:
 # Everything afer the colon (:) must be indented (usually 4 spaces)
 
 def main() -> None:
-     '''Print the byline to the console when this function is called.'''
-     print(get_byline())
+    '''Print results of get_byline() when main() is called.'''
+    print(get_byline())
 
 #####################################
 # Conditional Execution - Only call main() when executing this module as a script.
