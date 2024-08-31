@@ -1,7 +1,8 @@
 ''' Finalize utils module
 
-Data Analysis for Mars Landing
-This is the fourth interation.
+Data Analysis for Mars Landing:  Please note I missed the part that the Client data needed to be included.  I added into the final submission. 
+I did not catch for some time that that should be included.
+This is the final interation.
 '''
 #####################################
 # Import Modules at Top
@@ -24,6 +25,12 @@ is_robots: list = ["Rover", "StarLite", "Wallie", "Eclipse"]
 # List of floats robot sizes:  
 robot_size: list = [40.5, 37.5, 70.5, 60.5, 35]
 
+has_international_clients: bool = True
+years_in_operation: int = 10
+average_client_satisfaction: float = 4.7
+skills_offered: list = ["Data Analysis", "Machine Learning", "Business Intelligence"]
+client_satisfaction_scores: list = [4.8, 4.6, 4.9, 5.0, 4.7]
+
 #####################################
 # Calculate Basic Statistics 
 #####################################
@@ -33,6 +40,13 @@ min_robot_size: float = min(robot_size)
 max_robot_size: float = max(robot_size)
 mean_robot_size: float = statistics.mean(robot_size)
 stdev_robot_size: float = round(statistics.stdev(robot_size),2)
+
+min_score: float = min(client_satisfaction_scores)
+max_score: float = max(client_satisfaction_scores)
+mean_score: float = statistics.mean(client_satisfaction_scores)
+stdev_score: float = statistics.stdev(client_satisfaction_scores)
+
+
 
 #####################################
 # Define a global variable named byline.
@@ -53,6 +67,18 @@ Max robot size: {max_robot_size}
 Average robot size: {mean_robot_size}
 Standard Deviation of robot size: {stdev_robot_size}
 
+----------------------------------------------
+Constomer Data
+----------------------------------------------
+
+Has International Clients:  {has_international_clients}
+Years in Operation:         {years_in_operation}
+Skills offered:             {skills_offered}
+Client Satisfaction Scores: {client_satisfaction_scores}
+Minimum Satisfaction Score: {min_score}
+Maximum Satisfaction Score: {max_score}
+Mean Satisfaction Score: {mean_score}
+Standard Deviation of Satisfaction Scores: {stdev_score}
 """
 
 #####################################
