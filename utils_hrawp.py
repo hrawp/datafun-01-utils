@@ -1,15 +1,12 @@
-''' ITERATION 3
+''' ITERATION 4
 
 Data Analysis for Mars Landing
-
-This module provides a simple, reusable foundation for my analytics projects. 
-
-
-Process:
-
-In this third iteration, I declare addition variables.
-
+This is the fourth interation.
 '''
+#####################################
+# Import Modules at Top
+#####################################
+import statistics
 
 #####################################
 # Declare a global variables
@@ -22,10 +19,20 @@ is_mars_landing: bool = True
 days_away: int = 16
 
 # List of strings representing robots ready for deployment
-is_robots: list = ["Rover", "StarLite", "Wallie", "Eclipe"]
+is_robots: list = ["Rover", "StarLite", "Wallie", "Eclipse"]
 
 # List of floats robot sizes:  
-robot_size: list = [40.5, 37.5, 70.5, 60.5]
+robot_size: list = [40.5, 37.5, 70.5, 60.5, 35]
+
+#####################################
+# Calculate Basic Statistics 
+#####################################
+
+# Calculate some robot stats. 
+min_robot_size: float = min(robot_size)
+max_robot_size: float = max(robot_size)
+mean_robot_size: float = statistics.mean(robot_size)
+stdev_robot_size: float = round(statistics.stdev(robot_size),2)
 
 #####################################
 # Define a global variable named byline.
@@ -40,6 +47,7 @@ Is this a Mars Mission: {is_mars_landing}
 How many days away is the closest robot: {days_away}
 What is the names of the robots: {is_robots}
 The size of the robots: {robot_size}
+
 """
 
 #####################################
