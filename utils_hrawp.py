@@ -1,4 +1,4 @@
-''' ITERATION 4
+''' Finalize utils module
 
 Data Analysis for Mars Landing
 This is the fourth interation.
@@ -48,6 +48,11 @@ How many days away is the closest robot: {days_away}
 What is the names of the robots: {is_robots}
 The size of the robots: {robot_size}
 
+Min robot size: {min_robot_size}
+Max robot size: {max_robot_size}
+Average robot size: {mean_robot_size}
+Standard Deviation of robot size: {stdev_robot_size}
+
 """
 
 #####################################
@@ -81,3 +86,4 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+
